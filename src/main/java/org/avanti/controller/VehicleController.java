@@ -28,6 +28,7 @@ public class VehicleController {
     public Vehicle create(@RequestBody Vehicle vehicle){
         return service.create(vehicle);
     }
+
     @RequestMapping(method = RequestMethod.PUT, value = "{id}")
     public Vehicle put(@PathVariable("id") String vin, @RequestBody Vehicle vehicle){
         return service.put(vehicle);

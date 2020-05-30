@@ -1,5 +1,7 @@
 package org.avanti.entity;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
@@ -14,6 +16,10 @@ public class Vehicle {
     private int redLineRpm;
     private int maxFuelVolume;
     private Date lastServiceDate;
+
+    public void setVin(String vin) {
+        this.vin = vin;
+    }
 
     public String getVin() {
         return vin;

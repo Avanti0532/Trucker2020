@@ -31,7 +31,7 @@ public class VehicleController {
 
     @RequestMapping(method = RequestMethod.PUT, value = "{id}")
     public Vehicle put(@PathVariable("id") String vin, @RequestBody Vehicle vehicle){
-        return service.put(vehicle);
+        return service.put(vin,vehicle);
     }
 
 

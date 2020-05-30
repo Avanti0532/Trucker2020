@@ -1,5 +1,6 @@
 package org.avanti.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -22,7 +23,7 @@ public class Reading {
     private boolean cruiseControlOn;
     private int engineRpm;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Tire tires;
 
     public Reading() {

@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("vehicles")
+
 public class VehicleController {
 
     @Autowired
@@ -29,9 +30,10 @@ public class VehicleController {
         return service.create(vehicle);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "{id}")
-    public Vehicle put(@PathVariable("id") String vin, @RequestBody Vehicle vehicle){
-        return service.put(vin,vehicle);
+    @CrossOrigin(origins = "*", maxAge = 4800)
+    @RequestMapping(method = RequestMethod.PUT)
+    public void update(@RequestBody List<Vehicle> vehicle){
+          service.update(vehicle);
     }
 
 

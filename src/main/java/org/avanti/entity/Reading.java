@@ -1,9 +1,6 @@
 package org.avanti.entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
 
@@ -16,8 +13,8 @@ public class Reading {
     private double longitude;
     private Date timestamp;
     private double fuelVolume;
-    int speed;
-    int engineHp;
+    private int speed;
+    private int engineHp;
     private boolean checkEngineLightOn;
     private boolean engineCoolantLow;
     private boolean cruiseControlOn;

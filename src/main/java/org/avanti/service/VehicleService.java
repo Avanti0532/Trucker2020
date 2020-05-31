@@ -11,5 +11,5 @@ public interface VehicleService {
 
     Vehicle create(Vehicle vehicle);
 
-    Vehicle put(String id, Vehicle vehicle);
+    void update(List<Vehicle> vehicle);
 }

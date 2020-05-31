@@ -13,11 +13,11 @@ public class Vehicle {
     private String make;
     private String model;
     private int year;
-    private int redLineRpm;
-    private int maxFuelVolume;
+    private int redlineRpm;
+    private double maxFuelVolume;
     private Date lastServiceDate;
 
-    public void setVin(String vin) {
+       public void setVin(String vin) {
         this.vin = vin;
     }
 
@@ -49,19 +49,19 @@ public class Vehicle {
         this.year = year;
     }
 
-    public int getRedLineRpm() {
-        return redLineRpm;
+    public int getRedlineRpm() {
+        return redlineRpm;
     }
 
-    public void setRedLineRpm(int redLineRpm) {
-        this.redLineRpm = redLineRpm;
+    public void setRedlineRpm(int redLineRpm) {
+        this.redlineRpm = redLineRpm;
     }
 
-    public int getMaxFuelVolume() {
+    public double getMaxFuelVolume() {
         return maxFuelVolume;
     }
 
-    public void setMaxFuelVolume(int maxFuelVolume) {
+    public void setMaxFuelVolume(double maxFuelVolume) {
         this.maxFuelVolume = maxFuelVolume;
     }
 

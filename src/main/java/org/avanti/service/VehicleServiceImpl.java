@@ -42,19 +42,10 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     @Transactional
-    public Vehicle put(String id, Vehicle vehicle) {
-        Optional<Vehicle> existing = repository.findById(id);
-        Vehicle updateVehicle = existing.get();
-        if(!existing.isPresent()){
-            updateVehicle.setVin(vehicle.getVin());
+    public void update(List<Vehicle> vehicles) {
+        for (Vehicle v : vehicles) {
+               repository.save(v);
         }
-        updateVehicle.setLastServiceDate(vehicle.getLastServiceDate());
-        updateVehicle.setMake(vehicle.getMake());
-        updateVehicle.setMaxFuelVolume(vehicle.getMaxFuelVolume());
-        updateVehicle.setModel(vehicle.getModel());
-        updateVehicle.setRedLineRpm(vehicle.getRedLineRpm());
-        updateVehicle.setYear(vehicle.getYear());
-
-        return repository.save(updateVehicle);
     }
+
 }

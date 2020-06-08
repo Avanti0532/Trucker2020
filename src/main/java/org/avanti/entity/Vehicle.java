@@ -17,7 +17,7 @@ public class Vehicle {
     private double maxFuelVolume;
     private Date lastServiceDate;
 
-       public void setVin(String vin) {
+    public void setVin(String vin) {
         this.vin = vin;
     }
 
@@ -72,7 +72,5 @@ public class Vehicle {
     public void setLastServiceDate(Date lastServiceDate) {
         this.lastServiceDate = lastServiceDate;
     }
-
-
 
 }

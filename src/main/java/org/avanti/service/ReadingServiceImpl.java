@@ -8,10 +8,12 @@ import org.avanti.repository.AlertRepository;
 import org.avanti.repository.LocationRepository;
 import org.avanti.repository.ReadingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Primary
 public class ReadingServiceImpl implements ReadingService{
 
     @Autowired

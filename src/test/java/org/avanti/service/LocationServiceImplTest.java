@@ -28,7 +28,6 @@ public class LocationServiceImplTest {
         public LocationService getService(){
             return new LocationServiceImpl();
         }
-
     }
 
     @Autowired
